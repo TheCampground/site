@@ -1,11 +1,14 @@
 ---
 import Chip from "@core/components/Chip.astro";
 import Person from "@core/assets/person.svg";
-import Banner from "../assets/Banner.svg";
+import Banner from "../assets/Banner-Gradient.svg";
 ---
 
 <div class="card flex flex-col gap-4 pb-6 h-fit rounded-xl bg-container-low text-on-surface min-w-[40%] w-fit shadow-lg">
-    <img src={Banner.src} class="rounded-t-lg [mask-image:linear-gradient(to_top,transparent,black)] [mask-size:100%_100%] [mask-repeat:no-repeat]"/>
+    <slot name="banner">
+        <img src={Banner.src} class="rounded-t-lg [mask-image:linear-gradient(to_top,transparent,black)] [mask-size:100%_100%] [mask-repeat:no-repeat]"/>
+    </slot>
+
 
     <div class="text-primary px-6 font-500 text-sm">
         <slot name="name">
