@@ -11,3 +11,19 @@
   --containerLow: #332f26;
   --star: #e2e210
 }
+
+@theme inline {
+    --color-primary: var(--primary);
+    --color-primary-inverse: var(--inversePrimary);
+    --color-secondary-container: var(--secondaryContainer);
+    --color-on-secondary-container: var(--onSecondaryContainer);
+    --color-background: var(--background);
+    --color-on-surface: var(--onSurface);
+    --color-on-surface-alt: var(--onSurfaceAlt);
+    --color-container-low: var(--containerLow);
+    --color-star: var(--star);
+}
+
+.font-inter {
+    font-family: Inter, Arial, sans-serif;
+}
