@@ -1,105 +1,51 @@
 ---
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
-import Card from './Card.astro'
-import Person from '../assets/person.svg';
-import Chip from '../components/Chip.astro';
-import Star from "../assets/Star.svg";
-import Campground from "../assets/campground.png";
+import Project from "@core/components/Project.astro"
+import Card from "@core/components/Card.astro"
+import Chip from "@core/components/Chip.astro"
+import Person from "@core/assets/person.svg"
+import Star from "@core/assets/Star.svg"
 ---
 
-<img id="background" src={background.src} alt="" fetchpriority="high" />
-<div id="container" class="p-4 flex flex-col items-center justify-center w-full lg:h-full">
-    <div class="flex flex-col items-center justify-center max-w-[750px]">
-	<main class="w-full">
-	      <Card>
-			<p slot="name">About</p>
-			<h2 slot="header">Hello, We are Campground</h2>
-			<p slot="description">
-			    An independent collective where creativity meets code and design.
-				We’re a small group passionate about developing open-source tools, experimenting with new tech, and growing projects under one shared identity.
-			    Whether it’s a new app, community, or a weekend experiment, every project developed at Campground is fueled by curiosity, collaboration, and s'mores.
-			</p>
+<div id="container" class="p-4 flex flex-col items-center justify-center w-full lg:h-full my-0 md:my-5">
+    <div class="flex flex-col gap-6 items-center justify-center max-w-[750px]">
+        <main class="flex content-center w-full">
+            <Card>
+                <p slot="name">About</p>
+                <h2 slot="header">Hello, We are Campground</h2>
+                <p slot="description">
+                    An independent collective where creativity meets code and design.
+                    We're a small group passionate about developing open-source tools, experimenting with new tech, and growing projects under one shared identity.
+                    Whether it's a new app, community, or a weekend experiment, every project developed at Campground is fueled by curiosity, collaboration, and s'mores.
+                </p>
 
-			<Chip>
-		    	<Person/>
-                2
-			</Chip>
-		  </Card>
-	</main>
+                <Chip>
+                    <Person/>
+                    2
+                </Chip>
+            </Card>
+        </main>
 
-	<div class="flex flex-col items-center gap-2">
-	<div class="inline-flex items-start w-full">
-	    <h2 class="text-[var(--onSurfaceAlt)] font-[500] mt-5 mb-2">
-	       Projects
-	    </h2>
-	</div>
-		<div class="flex flex-wrap gap-3 max-w-[750px]">
-            <!-- Make project component --->
-           <div class="card flex flex-col p-6 flex-self-stretch rounded-xl bg-[var(--containerLow)] text-[var(--onSurface)] min-w-[40%] w-fit shadow-lg">
-               <div class="inline-flex gap-1 items-center text-[var(--onSurface)] font-[500] text-sm mb-2">
-                 	<img src={Campground.src} alt="" class="size-5 rounded-full" />
-                        Campground
-                    </div>
-
-                    <div class="text-[var(--onSurface)] text-xl font-[600] mb-2">
-                        Campsite
-                    </div>
-
-                    An ever-growing community on Discord that aims to provide a warm welcome to all new members joining us!
-
-                    <div class="inline-flex w-full gap-4 items-center text-sm mt-2">
-                        <div class="inline-flex gap-1 items-center description">
-                            <Person class="size-5"/>
-                            300
-                        </div>
-                    </div>
+        <div class="flex flex-col items-center gap-2">
+            <div class="inline-flex items-start w-full">
+                <h2 class="text-on-surface-alt font-[500]">Projects</h2>
             </div>
-
-
-		    <!-- Make project component --->
-		    <div class="card flex flex-col p-6 flex-self-stretch rounded-xl bg-[var(--containerLow)] text-[var(--onSurface)] flex-grow w-full shadow-lg">
-		        <div class="inline-flex gap-1 items-center text-[var(--onSurface)] font-[500] text-sm mb-2">
-			     	<img src={Campground.src} alt="" class="size-5 rounded-full" />
-                     Campground
-                </div>
-
-                <div class="text-[var(--onSurface)] text-xl font-[600] mb-2">
-                    Bonfire
-                </div>
-
-                A cute, fun and easy to use ShareS replacement.
-                <div class="inline-flex w-full gap-4 items-center mt-auto text-sm">
-                    <div class="inline-flex gap-1 items-center description">
-                        <Star class="size-4"/>
-                        300
-                    </div>
-                    <div class="inline-flex gap-1 items-center description">
-                        <div class="language">
-                            <div class="size-4 rounded-full bg-purple-400"></div>
-                        </div>
-                        Kotlin
-                    </div>
-                </div>
-		    </div>
-		</div>
-	</div>
+            <div class="flex flex-wrap gap-3 max-w-[750px]">
+                <Project
+                    name="Campsite"
+                    description="An ever-growing community on Discord that aims to provide a warm welcome to all new members joining us!"
+                    extra={[
+                        { icon: Person, value: 300 }
+                    ]}
+                />
+                <Project
+                    name="Bonfire"
+                    description="A cute, fun and easy to use ShareS replacement."
+                    lang="Kotlin"
+                    extra={[
+                        { icon: Star, value: 14 }
+                    ]}
+                />
+            </div>
+        </div>
+    </div>
 </div>
-</div>
-
-<style>
-	#background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 0;
-		filter: blur(100px);
-	}
-
-	main {
-		display: flex;
-		justify-content: center;
-	}
-</style>
