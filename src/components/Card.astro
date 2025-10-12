@@ -1,23 +1,30 @@
 ---
-import Chip from "@core/components/Chip.astro"
-import Person from "@core/assets/person.svg"
+import Chip from "@core/components/Chip.astro";
+import Person from "@core/assets/person.svg";
+import Banner from "../assets/Banner.svg";
 ---
 
-<div class="card flex flex-col gap-4 p-6 h-fit rounded-xl bg-container-low text-on-surface min-w-[40%] w-fit shadow-lg">
-    <div class="text-primary font-500 text-sm">
+<div class="card flex flex-col gap-4 pb-6 h-fit rounded-xl bg-container-low text-on-surface min-w-[40%] w-fit shadow-lg">
+    <img src={Banner.src} class="rounded-t-lg [mask-image:linear-gradient(to_top,transparent,black)] [mask-size:100%_100%] [mask-repeat:no-repeat]"/>
+
+    <div class="text-primary px-6 font-500 text-sm">
         <slot name="name">
             Name
         </slot>
     </div>
-    <div class="text-on-surface text-3xl font-semibold">
+
+    <div class="text-on-surface px-6 text-3xl font-semibold">
         <slot name="header">
             Header
         </slot>
     </div>
-    <slot name="description">
-        Description
-    </slot>
-    <div class="inline-flex w-full gap-2 items-center flex-wrap">
+    <div class="px-6">
+        <slot name="description">
+            Description
+        </slot>
+    </div>
+
+    <div class="inline-flex w-full px-6 gap-2 items-center flex-wrap">
         <slot>
             <Chip>
                 <Person class="size-4"/>
