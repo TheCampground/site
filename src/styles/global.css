@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #E9D37D;
+  --inversePrimary: #316941;
+  --secondaryContainer: #394b3b;
+  --onSecondaryContainer: #A8C49C;
+  --background: #26241f;
+  --onSurface: #E3DCBF;
+  --onSurfaceAlt: #c1c9bf;
+  --containerLow: #332f26;
+  --star: #e2e210
+}

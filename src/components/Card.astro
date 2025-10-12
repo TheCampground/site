@@ -1,0 +1,39 @@
+---
+import Chip from "./Chip.astro";
+import Person from "../assets/person.svg";
+---
+
+<div class="card flex flex-col gap-4 p-6 h-fit rounded-xl bg-[var(--containerLow)] text-[var(--onSurface)] min-w-[40%] w-fit shadow-lg">
+    <div class="text-[var(--primary)] font-500 text-sm">
+        <slot name="name">
+            Name
+        </slot>
+    </div>
+    <div class="text-[var(--onSurface)] text-3xl font-semibold">
+        <slot name="header">
+            Header
+        </slot>
+    </div>
+
+    <slot name="description">
+        Description
+    </slot>
+
+
+    <div class="inline-flex w-full gap-2 items-center flex-wrap">
+        <slot>
+            <Chip>
+                <Person class="size-4"/>
+                1 Chip
+            </Chip>
+            <Chip>
+                <Person class="size-4"/>
+                2 Chips
+            </Chip>
+            <Chip>
+                <Person class="size-4"/>
+                3 Chips???
+            </Chip>
+        </slot>
+    </div>
+</div>
