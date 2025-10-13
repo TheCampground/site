@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import Chip from "@core/components/Chip.astro";
 import Person from "@core/assets/person.svg";
 import Banner from "../assets/Banner-Gradient.svg";
@@ -6,7 +7,7 @@ import Banner from "../assets/Banner-Gradient.svg";
 
 <div class="card flex flex-col gap-4 pb-6 h-fit rounded-xl bg-container-low text-on-surface min-w-[40%] w-fit shadow-lg">
     <slot name="banner">
-        <img src={Banner.src} class="rounded-t-lg [mask-image:linear-gradient(to_top,transparent,black)] [mask-size:100%_100%] [mask-repeat:no-repeat]"/>
+        <Image src={Banner} class="rounded-t-lg [mask-image:linear-gradient(to_top,transparent,black)] [mask-size:100%_100%] [mask-repeat:no-repeat]" alt="Vector forest scene with white-outline tent in the center." priority/>
     </slot>
 
 
