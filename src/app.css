@@ -1,0 +1,37 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+:root {
+    --primary: #E9D37D;
+    --inversePrimary: #316941;
+    --secondaryContainer: #394b3b;
+    --badge: #3F4445;
+    --onSecondaryContainer: #A8C49C;
+    --background: #1F1D19;
+    --onSurface: #E3DCBF;
+    --onSurfaceAlt: #c1c9bf;
+    --containerLow: #332f26;
+    --star: #e2e210;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@theme inline {
+    --color-primary: var(--primary);
+    --color-primary-inverse: var(--inversePrimary);
+    --color-secondary-container: var(--secondaryContainer);
+    --color-on-secondary-container: var(--onSecondaryContainer);
+    --color-background: var(--background);
+    --color-on-surface: var(--onSurface);
+    --color-on-surface-alt: var(--onSurfaceAlt);
+    --color-container-low: var(--containerLow);
+    --color-star: var(--star);
+    --color-badge: var(--badge);
+}
+
+body {
+    font-family: 'Space Grotesk Variable', sans-serif;
+}
