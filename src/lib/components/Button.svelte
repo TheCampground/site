@@ -19,7 +19,7 @@
             let elem = document.querySelector(element)
             elem ? elem?.scrollIntoView({ behavior: "smooth" }) : goto(href)
         } else {
-            goto(href)
+            href.startsWith("/") ? goto(href) : window.open(href, "_blank")
         }
     }
 
