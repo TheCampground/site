@@ -17,9 +17,10 @@ export const langColors: Record<string, string> = {
     PHP: "#4F5D95",
     Ruby: "#701516",
     HTML: "#e34c26",
-    CSS: "#563d7c",
+    CSS: "#214ce5",
     Shell: "#89e051",
     Swift: "#ffac45",
     Kotlin: "#A97BFF",
-    Dart: "#00B4AB"
+    Dart: "#00B4AB",
+    Svelte: "#ff3e00",
 }

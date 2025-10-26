@@ -6,10 +6,37 @@ interface ProjectCardExtraItem {
     value: string | number
 }
 
-export interface ProjectCardProps {
+type ProjectCardLinkGithub = {
+    type: "github"
+    icon?: never
+    repo: string
+    url?: never
+    text?: never
+}
+type ProjectCardLinkUrl = {
+    type: "url"
+    icon?: IconSource
+    url: string
+    text: string
+    repo?: never
+}
+
+type ProjectCardSingleLang = {
     name: string
     description: string
     image?: string
-    lang?: keyof typeof langColors
+    lang?: string
     extra?: Array<ProjectCardExtraItem>
+    link?: ProjectCardLinkGithub | ProjectCardLinkUrl
+    langs?: never
 }
+type ProjectCardMultiLang = {
+    name: string
+    description: string
+    image?: string
+    lang?: never
+    extra?: Array<ProjectCardExtraItem>
+    link?: ProjectCardLinkGithub | ProjectCardLinkUrl
+    langs?: string[]
+}
+export type ProjectCardProps = ProjectCardSingleLang | ProjectCardMultiLang
