@@ -34,7 +34,7 @@ importers:
         version: 1.4.0
       ui:
         specifier: github:TheCampground/ui
-        version: https://codeload.github.com/TheCampground/ui/tar.gz/2e54222440ac9f07177eca41edb7cf20cb7840fe(@internationalized/date@3.10.0)(@sveltejs/kit@2.49.1(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.45.6)(vite@7.2.6(jiti@2.6.1)(lightningcss@1.30.2)))(svelte@5.45.6)(vite@7.2.6(jiti@2.6.1)(lightningcss@1.30.2)))(svelte@5.45.6)
+        version: https://codeload.github.com/TheCampground/ui/tar.gz/4e76e0e3f64bdfe8953e1ff4e68b2d1e03e72cd5(@internationalized/date@3.10.0)(@sveltejs/kit@2.49.1(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.45.6)(vite@7.2.6(jiti@2.6.1)(lightningcss@1.30.2)))(svelte@5.45.6)(vite@7.2.6(jiti@2.6.1)(lightningcss@1.30.2)))(svelte@5.45.6)
     devDependencies:
       '@sveltejs/adapter-node':
         specifier: ^5.4.0
@@ -1061,8 +1061,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  ui@https://codeload.github.com/TheCampground/ui/tar.gz/2e54222440ac9f07177eca41edb7cf20cb7840fe:
-    resolution: {tarball: https://codeload.github.com/TheCampground/ui/tar.gz/2e54222440ac9f07177eca41edb7cf20cb7840fe}
+  ui@https://codeload.github.com/TheCampground/ui/tar.gz/4e76e0e3f64bdfe8953e1ff4e68b2d1e03e72cd5:
+    resolution: {tarball: https://codeload.github.com/TheCampground/ui/tar.gz/4e76e0e3f64bdfe8953e1ff4e68b2d1e03e72cd5}
     version: 0.0.1
     peerDependencies:
       svelte: ^5.0.0
@@ -2042,7 +2042,7 @@ snapshots:
 
   typescript@5.9.3: {}
 
-  ui@https://codeload.github.com/TheCampground/ui/tar.gz/2e54222440ac9f07177eca41edb7cf20cb7840fe(@internationalized/date@3.10.0)(@sveltejs/kit@2.49.1(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.45.6)(vite@7.2.6(jiti@2.6.1)(lightningcss@1.30.2)))(svelte@5.45.6)(vite@7.2.6(jiti@2.6.1)(lightningcss@1.30.2)))(svelte@5.45.6):
+  ui@https://codeload.github.com/TheCampground/ui/tar.gz/4e76e0e3f64bdfe8953e1ff4e68b2d1e03e72cd5(@internationalized/date@3.10.0)(@sveltejs/kit@2.49.1(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.45.6)(vite@7.2.6(jiti@2.6.1)(lightningcss@1.30.2)))(svelte@5.45.6)(vite@7.2.6(jiti@2.6.1)(lightningcss@1.30.2)))(svelte@5.45.6):
     dependencies:
       '@steeze-ui/phosphor-icons': 2.1.1
       '@steeze-ui/svelte-icon': 1.6.2(svelte@5.45.6)
