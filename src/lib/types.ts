@@ -24,7 +24,7 @@ type ProjectCardLinkUrl = {
 type ProjectCardSingleLang = {
     name: string
     description: string
-    image?: string
+    image?: string | IconSource
     lang?: string
     extra?: Array<ProjectCardExtraItem>
     link?: ProjectCardLinkGithub | ProjectCardLinkUrl
@@ -33,7 +33,7 @@ type ProjectCardSingleLang = {
 type ProjectCardMultiLang = {
     name: string
     description: string
-    image?: string
+    image?: string | IconSource
     lang?: never
     extra?: Array<ProjectCardExtraItem>
     link?: ProjectCardLinkGithub | ProjectCardLinkUrl

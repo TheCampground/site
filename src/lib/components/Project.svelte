@@ -1,17 +1,21 @@
 <script lang="ts">
     import { Icon, type IconSource } from "@steeze-ui/svelte-icon"
     import { GithubLogo, Tipi } from "@steeze-ui/phosphor-icons"
-    import Campground from "@core/assets/campground.png"
-    import Button from "@core/components/Button.svelte"
     import type { ProjectCardProps } from "@core/types"
     import { langColors } from "@core/utils"
+    import { Campground } from "@core/icons"
+    import { Button } from "ui"
 
     const { name, description, image, lang, langs, extra = [], link }: ProjectCardProps = $props()
 </script>
 
-<div class="card flex flex-col gap-3 p-4 flex-self-stretch rounded-xl bg-container-low text-on-surface flex-grow w-full shadow-lg">
+<div class="card flex flex-col gap-3 p-4 flex-self-stretch rounded-xl bg-container-low text-on-surface flex-grow w-full border">
     <div class="inline-flex gap-3 items-center text-on-surface text-sm">
-        <img src={image || Campground} alt="Tent with white outlines" class="size-6 rounded-full pointer-events-none select-none" draggable="false" />
+        {#if image && typeof image === "string"}
+            <img src={image} alt="Tent with white outlines" class="size-6 rounded-full pointer-events-none select-none" draggable="false" />
+        {:else}
+            <Icon src={(image as IconSource) || Campground} class="h-6 w-auto select-none pointer-events-none" />
+        {/if}
         <p class="font-bold">{name}</p>
     </div>
     <div class="flex flex-col w-full">
@@ -57,7 +61,7 @@
 {#snippet projectLink()}
     {#if link}
         {@const url = link.type === "github" ? `https://github.com/TheCampground/${link.repo}` : link.url}
-        <Button href={url} variant="default" class="flex items-center gap-1">
+        <Button href={url} size="small" variant="primary" class="flex items-center gap-1 text-xs">
             {#if link.type === "github"}
                 <Icon src={GithubLogo} theme="bold" class="size-4" />
                 GitHub
