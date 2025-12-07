@@ -3,26 +3,29 @@
         UsersThree,
         GithubLogo,
         HandWaving,
-    } from "@steeze-ui/phosphor-icons";
-    import Marshmallow from "@core/assets/Marshmallow.png";
-    import TheCampsite from "@core/assets/TheCampsite.png";
-    import Project from "@core/components/Project.svelte";
-    import Button from "@core/components/Button.svelte";
-    import Campground from "@core/assets/favicon.png";
-    import Card from "@core/components/Card.svelte";
-    import Bonfire from "@core/assets/bonfire.png";
-    import { Icon } from "@steeze-ui/svelte-icon";
+    } from "@steeze-ui/phosphor-icons"
+    import Marshmallow from "@core/assets/Marshmallow.png"
+    import TheCampsite from "@core/assets/TheCampsite.png"
+    import Project from "@core/components/Project.svelte"
+    import Banner from "@core/assets/Banner-Gradient.svg"
+    import { Icon } from "@steeze-ui/svelte-icon"
+    import { Campground } from "@core/icons"
+    import { Card, Button } from "ui"
 </script>
 
 <main id="home" class="flex content-center w-full">
-    <Card
-        name="About"
-        header="Hey! We are Campground."
-        description="Campground is an independent collective where creativity meets code and design. We're a small group passionate about developing open-source tools, experimenting with new tech, and growing projects under one shared identity. Whether it's a new app, community, or a weekend experiment, every project developed at Campground is fueled by curiosity, collaboration, and s'mores."
-    >
+    <Card class="flex flex-col gap-4" media={Banner}>
+        <p class="text-sm font-medium tracking-tight text-brand">About</p>
+        <p class="text-2xl font-bold">Hey! We are Campground.</p>
+        <p class="text-foreground-alt">
+            Campground is an independent collective where creativity meets code and design.
+            We're a small group passionate about developing open-source tools, experimenting with new tech, and growing projects under one shared identity.
+            Whether it's a new app, community, or a weekend experiment, every project developed at Campground is fueled by curiosity, collaboration, and s'mores.
+        </p>
         <Button
             href="https://github.com/TheCampground"
             variant="default"
+            target="_blank"
             class="flex items-center gap-1 p-2"
         >
             <Icon src={GithubLogo} theme="bold" class="size-4" />
@@ -66,11 +69,11 @@
         </div>
         <!-- If / when Shuttle is recreated to match the theme -->
         <!-- <Project
-            name="Bonfire"
-            description="A cute, fun and easy to use ShareS replacement."
-            image={Bonfire}
-            langs={["Kotlin", "Svelte", "TypeScript"]}
-        /> -->
+                name="Bonfire"
+                description="A cute, fun and easy to use ShareS replacement."
+                image={Bonfire}
+                langs={["Kotlin", "Svelte", "TypeScript"]}
+            /> -->
         <Project
             name="Marshmallow"
             description="The helper bot for The Campsite Discord community"
