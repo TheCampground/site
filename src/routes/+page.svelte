@@ -48,10 +48,10 @@
                 url: "/join",
             }}
         />
-        <div class="w-full flex flex-wrap md:flex-nowrap gap-2">
+        <div class="w-full flex flex-wrap md:flex-nowrap gap-3">
             <Project
                 name="ui"
-                description="The UI library for Campground projects"
+                description="The svelte UI library for Campground projects"
                 image={Campground}
                 lang="Svelte"
                 link={{ type: "github", repo: "ui" }}
