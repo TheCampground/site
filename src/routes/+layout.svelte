@@ -6,19 +6,18 @@
     import Header from "@core/components/Header.svelte"
     import Footer from "@core/components/Footer.svelte"
     import { ModeWatcher } from "mode-watcher"
+    import { Noise } from "ui"
 
     let { children } = $props()
 </script>
 
-<Background />
+<!-- <Background /> -->
+
+<Noise intensity="medium" class="fixed" />
 <ModeWatcher />
 
-<div
-    class="p-4 flex flex-col items-center justify-center w-full lg:h-full my-0 md:my-5"
->
-    <div
-        class="flex flex-col gap-6 items-center justify-center max-w-[750px] w-full"
-    >
+<div class="p-4 flex flex-col items-center justify-center w-full lg:h-full my-0 md:my-5">
+    <div class="flex flex-col gap-6 items-center justify-center max-w-[750px] w-full">
         <Header />
         {@render children?.()}
         <Footer />
