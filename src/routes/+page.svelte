@@ -15,7 +15,7 @@
 
 <main id="home" class="flex content-center w-full">
     <Card class="flex flex-col gap-4" media={Banner}>
-        <p class="text-sm font-medium tracking-tight text-brand">About</p>
+        <p class="text-sm font-medium tracking-tight text-foreground-alt/80 dark:text-brand">About</p>
         <p class="text-2xl font-bold">Hey! We are Campground.</p>
         <p class="text-foreground-alt">
             Campground is an independent collective where creativity meets code and design.
